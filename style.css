@@ -26,6 +26,14 @@ header {
     margin-right: 20px;
 }
 
+/* Мобільне фото */
+.head-img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Стиль для навігації */
 nav {
     display: flex;
     gap: 10px;
@@ -70,6 +78,7 @@ nav {
     text-align: center;
 }
 
+/* Стиль для тексту в hero */
 .hero-text h2 {
     font-size: 2.5rem;
     margin: 0;
@@ -100,6 +109,13 @@ nav {
     .hero {
         height: 400px; /* Зменшена висота для мобільних */
         background-position: top;
+        background-size: cover; /* Зображення масштабуватиметься пропорційно */
+    }
+
+    /* Гарантуємо, що фото правильно масштабується */
+    .hero img {
+        width: 100%;
+        height: auto;
     }
 
     .hero-text {
