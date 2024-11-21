@@ -1,93 +1,125 @@
-header{
-    background-color: black;
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 10px 20px;
-    height: 60px;
-    border-radius:10px;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-.home{
-    margin-right: 15px; 
-    font-size: 18px;
-     text-decoration: none;
-      color: white;
-}
-
-.us{
-    margin-right: 15px; 
-    font-size: 18px;
-     text-decoration: none;
-      color: white;
-}
-
-.poisk{
-    padding: 5px 10px;
-     font-size: 16px; 
-     margin-right: 15px;
-}
-
-.buy-header{
-    background-color:#007bff;
-     color: #ffffff;
-      border: none; 
-      padding: 10px 15px;
-       font-size: 16px; 
-       cursor: pointer; 
-       border-radius: 5px;
-}
-
-.div-poisk{
-    display: flex; 
-    align-items: center;
-}
-
-.div-head{
+/* Стиль для хедера */
+header {
+    background-color: rgb(0, 0, 0); /* Прозорий чорний фон */
     display: flex;
-     align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 2;
 }
 
-.head-img{
+.div-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.head-img {
     height: 50px;
-     margin-right: 20px;
+    margin-right: 20px;
 }
 
-.head-login{
-    font-size: 18px;
-     text-decoration: none; 
-     color: #ffffff;
+nav {
+    display: flex;
+    gap: 10px;
 }
-
-
-
 
 .highlight-button {
-    position: relative;
-    background-color: #000000;
-    color: white;
-    padding: 10px 20px;
-    border: none;
     font-size: 16px;
-    cursor: pointer;
-    overflow: hidden; /* Приховує лінію за межами кнопки */
-    border-radius: 8px;
+    padding: 8px 15px;
     text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 8px;
+    position: relative;
 }
 
-/* Стиль для лінії */
 .highlight-button::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 3px; /* Товщина лінії */
+    height: 3px;
     width: 0;
-    background-color: white; /* Колір лінії */
-    transition: width 0.3s ease-in-out; /* Анімація підсвічування */
+    background-color: white;
+    transition: width 0.3s ease-in-out;
 }
 
-/* Анімація при наведенні */
 .highlight-button:hover::after {
-    width: 100%; /* Лінія підсвічує всю ширину кнопки */
+    width: 100%;
+}
+
+/* Стиль для секції hero */
+.hero {
+    height: 600px; /* Зменшена висота секції для телефонів */
+    background-image: url("https://c.pxhere.com/photos/c7/64/dirt_bike_air_jump_motocross_rider_extreme_sports_biker_motocross_extreme_race-1183330.jpg!d");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+}
+
+/* Адаптація для мобільних */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .highlight-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .hero {
+        height: 400px; /* Зменшена висота для мобільних */
+        background-position: top;
+    }
+
+    .hero-text {
+        font-size: 2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 0.9rem;
+    }
 }
