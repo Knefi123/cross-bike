@@ -79,6 +79,12 @@ nav {
 }
 
 /* Стиль для тексту в hero */
+.hero-text {
+    font-size: 2rem;
+    text-align: center; /* Додано для вирівнювання тексту по центру */
+    z-index: 2;
+}
+
 .hero-text h2 {
     font-size: 2.5rem;
     margin: 0;
