@@ -1,0 +1,93 @@
+header{
+    background-color: black;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px 20px;
+    height: 60px;
+    border-radius:10px;
+}
+
+.home{
+    margin-right: 15px; 
+    font-size: 18px;
+     text-decoration: none;
+      color: white;
+}
+
+.us{
+    margin-right: 15px; 
+    font-size: 18px;
+     text-decoration: none;
+      color: white;
+}
+
+.poisk{
+    padding: 5px 10px;
+     font-size: 16px; 
+     margin-right: 15px;
+}
+
+.buy-header{
+    background-color:#007bff;
+     color: #ffffff;
+      border: none; 
+      padding: 10px 15px;
+       font-size: 16px; 
+       cursor: pointer; 
+       border-radius: 5px;
+}
+
+.div-poisk{
+    display: flex; 
+    align-items: center;
+}
+
+.div-head{
+    display: flex;
+     align-items: center;
+}
+
+.head-img{
+    height: 50px;
+     margin-right: 20px;
+}
+
+.head-login{
+    font-size: 18px;
+     text-decoration: none; 
+     color: #ffffff;
+}
+
+
+
+
+.highlight-button {
+    position: relative;
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    overflow: hidden; /* Приховує лінію за межами кнопки */
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* Стиль для лінії */
+.highlight-button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px; /* Товщина лінії */
+    width: 0;
+    background-color: white; /* Колір лінії */
+    transition: width 0.3s ease-in-out; /* Анімація підсвічування */
+}
+
+/* Анімація при наведенні */
+.highlight-button:hover::after {
+    width: 100%; /* Лінія підсвічує всю ширину кнопки */
+}
