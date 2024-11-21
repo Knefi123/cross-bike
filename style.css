@@ -11,9 +11,11 @@ header {
     justify-content: space-between;
     padding: 10px 20px;
     position: relative;
-    z-index: 2;
+    width: 100%; /* Ширина на весь екран */
+    z-index: 2; /* Хедер знаходиться над фоновим зображенням */
 }
 
+/* Логотип */
 .div-head {
     display: flex;
     align-items: center;
@@ -100,6 +102,7 @@ nav {
         flex-direction: column;
         align-items: center;
         padding: 15px;
+        width: 100%; /* Для повної ширини на мобільних */
     }
 
     nav {
@@ -116,12 +119,6 @@ nav {
         height: 400px; /* Зменшена висота для мобільних */
         background-position: top;
         background-size: cover; /* Зображення масштабуватиметься пропорційно */
-    }
-
-    /* Гарантуємо, що фото правильно масштабується */
-    .hero img {
-        width: 100%;
-        height: auto;
     }
 
     .hero-text {
