@@ -1,26 +1,16 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    
 }
 
-/* Стиль для хедера */
 header {
-    background-color: rgb(0, 0, 0); /* Прозорий чорний фон */
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    position: relative;
-    width: 100%; /* Ширина на весь екран */
-    z-index: 2; /* Хедер знаходиться над фоновим зображенням */
-}
-
-/* Логотип */
-.div-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    height: 60px;
 }
 
 .head-img {
@@ -28,27 +18,17 @@ header {
     margin-right: 20px;
 }
 
-/* Мобільне фото */
-.head-img {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Стиль для навігації */
-nav {
-    display: flex;
-    gap: 10px;
-}
-
 .highlight-button {
-    font-size: 16px;
-    padding: 8px 15px;
-    text-decoration: none;
-    color: white;
-    background-color: black;
-    border-radius: 8px;
     position: relative;
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    text-decoration: none;
 }
 
 .highlight-button::after {
@@ -66,9 +46,9 @@ nav {
     width: 100%;
 }
 
-/* Стиль для секції hero */
 .hero {
-    height: 600px; /* Зменшена висота секції для телефонів */
+    position: relative;
+    height: 500px;
     background-image: url("https://c.pxhere.com/photos/c7/64/dirt_bike_air_jump_motocross_rider_extreme_sports_biker_motocross_extreme_race-1183330.jpg!d");
     background-size: cover;
     background-position: center;
@@ -76,69 +56,360 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.hero-text {
     color: white;
     text-align: center;
 }
 
-/* Стиль для тексту в hero */
-.hero-text {
-    font-size: 2rem;
-    text-align: center; /* Додано для вирівнювання тексту по центру */
-    z-index: 2;
+.products-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    flex-wrap: wrap;
 }
 
-.hero-text h2 {
-    font-size: 2.5rem;
+.product-card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px; /* Видовжуємо картку */
+    border: 1px solid #ccc;
+    margin: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #555;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.buy-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buy-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Модальне вікно */
+.modal {
+    display: none; /* Приховане за замовчуванням */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Для галереї в модальному вікні */
+.modal-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.prev, .next {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+
+/* Для форми в модальному вікні */
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+main{
+    display: flex;
+    background-color: #ffffff;
+}
+
+
+body {
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-.hero-text p {
+/* Стиль для кнопки */
+.highlight-button {
+    position: relative;
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* Модальне вікно */
+.modal {
+    display: none; /* Приховане за замовчуванням */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Для галереї в модальному вікні */
+.modal-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* Для форми в модальному вікні */
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Стиль для карток товару */
+.products-container {
+    display: flex;
+    flex-wrap: wrap; /* Це дозволяє карткам переноситися на новий рядок */
+    justify-content: space-between; /* Вирівнювання карток по рядку */
+    gap: 20px; /* Відстань між картками */
+    padding: 20px;
+}
+
+/* Стиль для картки товару */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: calc(33.% - 0px); /* Картки займають 1/3 ширини контейнера */
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Стиль для зображення товару */
+.product-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* Стиль для інформації про товар */
+.product-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.product-info h3 {
+    margin: 0;
     font-size: 1.5rem;
 }
 
-/* Адаптація для мобільних */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px;
-        width: 100%; /* Для повної ширини на мобільних */
-    }
+.product-info p {
+    font-size: 1.2rem;
+    color: #555;
+}
 
-    nav {
-        flex-direction: column;
-        margin-top: 10px;
-    }
 
-    .highlight-button {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
 
-    .hero {
-        height: 400px; /* Зменшена висота для мобільних */
-        background-position: top;
-        background-size: cover; /* Зображення масштабуватиметься пропорційно */
-    }
 
-    .hero-text {
-        font-size: 2rem;
-    }
+/* Стилі для футера */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 14px;
+}
 
-    .hero-text h2 {
-        font-size: 1.8rem;
-    }
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
 
-    .hero-text p {
-        font-size: 1rem;
-    }
+.footer-logo-img {
+    width: 100px;
+    height: auto;
+}
 
-    main {
-        padding: 15px;
-    }
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
 
-    footer {
-        text-align: center;
-        font-size: 0.9rem;
-    }
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.footer-bottom p {
+    margin: 0;
 }
