@@ -1,3 +1,42 @@
+Skip to content
+Navigation Menu
+Knefi123
+/
+cross-bike
+
+Type / to search
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+Files
+Go to file
+t
+README.md
+index.html
+main.js
+style.css
+Breadcrumbscross-bike
+/style.css
+Latest commit
+Knefi123
+Knefi123
+asf
+755c66b
+ · 
+17 hours ago
+History
+File metadata and controls
+
+Code
+
+Blame
+415 lines (355 loc) · 7.38 KB
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -224,36 +263,61 @@ body {
     text-decoration: none;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Модальне вікно */
 .modal {
-    display: none; /* Приховане за замовчуванням */
+    display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
-    background-color: white;
-    margin: 15% auto;
+    position: relative;
+    margin: 10% auto;
     padding: 20px;
+    background: white;
     border-radius: 10px;
-    width: 80%;
-    max-width: 500px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .close-btn {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 10px;
+    font-size: 24px;
     cursor: pointer;
+}
+
+.modal-content {
+    position: relative;
+    margin: 10% auto; /* Центрування по вертикалі */
+    transform: translateY(-50%);
+    padding: 20px;
+    text-align: center;
 }
 
 /* Для галереї в модальному вікні */
@@ -264,10 +328,19 @@ body {
     margin-bottom: 20px;
 }
 
-.modal-image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 /* Для форми в модальному вікні */
@@ -292,6 +365,64 @@ form button {
 form button:hover {
     background-color: #0056b3;
 }
+/* Приховати кнопку за замовчуванням */
+.mobile-buy-btn {
+    display: none;
+}
+
+/* Показувати кнопку тільки для екранів менше 768px */
+@media (max-width: 768px) {
+    .mobile-buy-btn {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        background-color: #28a745;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .mobile-buy-btn:hover {
+        background-color: #218838;
+    }
+}
+input[type="text"], input[type="tel"] {
+    width: 80%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Стиль для карток товару */
 .products-container {
@@ -301,25 +432,19 @@ form button:hover {
     gap: 20px; /* Відстань між картками */
     padding: 20px;
 }
-
-/* Стиль для картки товару */
 .product-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 15px;
-    width: calc(33.% - 0px); /* Картки займають 1/3 ширини контейнера */
-    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+
 
 .product-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Стиль для зображення товару */
@@ -345,6 +470,19 @@ form button:hover {
     font-size: 1.2rem;
     color: #555;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

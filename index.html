@@ -34,7 +34,7 @@
     <!-- Контейнер для карток товарів -->
     <div class="products-container">
         <!-- Картка товару -->
-        <div class="product-card" id="product1">
+        <div class="product-card" id="product1" onclick="openModal('product1')">
             <img src="https://th.bing.com/th/id/OIP.DnR0LMQg1Wt3eYx6WOgbywHaHa?w=1000&h=1000&rs=1&pid=ImgDetMain" alt="Мотоцикл" class="product-image">
             <div class="product-info">
                 <h3>Мотоцикл kayo K1</h3>
@@ -42,7 +42,7 @@
             </div>
         </div>
 
-        <div class="product-card" id="product1">
+        <div class="product-card" id="product2" onclick="openModal('product2')">
             <img src="https://th.bing.com/th/id/OIP.DnR0LMQg1Wt3eYx6WOgbywHaHa?w=1000&h=1000&rs=1&pid=ImgDetMain" alt="Мотоцикл" class="product-image">
             <div class="product-info">
                 <h3>Мотоцикл kayo K1</h3>
@@ -50,7 +50,7 @@
             </div>
         </div>
 
-        <div class="product-card" id="product1">
+        <div class="product-card" id="product3" onclick="openModal('product3')">
             <img src="https://th.bing.com/th/id/OIP.DnR0LMQg1Wt3eYx6WOgbywHaHa?w=1000&h=1000&rs=1&pid=ImgDetMain" alt="Мотоцикл" class="product-image">
             <div class="product-info">
                 <h3>Мотоцикл kayo K1</h3>
@@ -58,7 +58,7 @@
             </div>
         </div>
 
-        <div class="product-card" id="product1">
+        <div class="product-card" id="product4" onclick="openModal('product4')">
             <img src="https://th.bing.com/th/id/OIP.DnR0LMQg1Wt3eYx6WOgbywHaHa?w=1000&h=1000&rs=1&pid=ImgDetMain" alt="Мотоцикл" class="product-image">
             <div class="product-info">
                 <h3>Мотоцикл kayo K1</h3>
@@ -66,7 +66,7 @@
             </div>
         </div>
 
-        <div class="product-card" id="product1">
+        <div class="product-card" id="product5" onclick="openModal('product5')">
             <img src="https://th.bing.com/th/id/OIP.DnR0LMQg1Wt3eYx6WOgbywHaHa?w=1000&h=1000&rs=1&pid=ImgDetMain" alt="Мотоцикл" class="product-image">
             <div class="product-info">
                 <h3>Мотоцикл kayo K1</h3>
@@ -74,7 +74,7 @@
             </div>
         </div>
 
-        <div class="product-card" id="product1">
+        <div class="product-card" id="product6" onclick="openModal('product6')">
             <img src="https://th.bing.com/th/id/OIP.DnR0LMQg1Wt3eYx6WOgbywHaHa?w=1000&h=1000&rs=1&pid=ImgDetMain" alt="Мотоцикл" class="product-image">
             <div class="product-info">
                 <h3>Мотоцикл kayo K1</h3>
@@ -82,7 +82,7 @@
             </div>
         </div>
 
-        <div class="product-card" id="product1">
+        <div class="product-card" id="product7" onclick="openModal('product7')">
             <img src="https://th.bing.com/th/id/OIP.DnR0LMQg1Wt3eYx6WOgbywHaHa?w=1000&h=1000&rs=1&pid=ImgDetMain" alt="Мотоцикл" class="product-image">
             <div class="product-info">
                 <h3>Мотоцикл kayo K1</h3>
@@ -90,7 +90,7 @@
             </div>
         </div>
 
-        <div class="product-card" id="product1">
+        <div class="product-card" id="product8" onclick="openModal('product8')">
             <img src="https://th.bing.com/th/id/OIP.DnR0LMQg1Wt3eYx6WOgbywHaHa?w=1000&h=1000&rs=1&pid=ImgDetMain" alt="Мотоцикл" class="product-image">
             <div class="product-info">
                 <h3>Мотоцикл kayo K1</h3>
@@ -98,7 +98,7 @@
             </div>
         </div>
 
-        <div class="product-card" id="product1">
+        <div class="product-card" id="product9" onclick="openModal('product9')">
             <img src="https://th.bing.com/th/id/OIP.DnR0LMQg1Wt3eYx6WOgbywHaHa?w=1000&h=1000&rs=1&pid=ImgDetMain" alt="Мотоцикл" class="product-image">
             <div class="product-info">
                 <h3>Мотоцикл kayo K1</h3>
@@ -106,7 +106,7 @@
             </div>
         </div>
 
-        <div class="product-card" id="product1">
+        <div class="product-card" id="product10" onclick="openModal('product10')">
             <img src="https://th.bing.com/th/id/OIP.DnR0LMQg1Wt3eYx6WOgbywHaHa?w=1000&h=1000&rs=1&pid=ImgDetMain" alt="Мотоцикл" class="product-image">
             <div class="product-info">
                 <h3>Мотоцикл kayo K1</h3>
@@ -119,21 +119,22 @@
         <!-- Додаткові картки товару... -->
     </div>
 
-
-  <!-- Модальне вікно -->
+<!-- Модальне вікно -->
 <div id="buyModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2>Оформлення покупки</h2>
-        <div class="modal-gallery">
-            <img id="modalImage" class="modal-image" src="" alt="Product Image">
-        </div>
-        <form id="purchaseForm">
-            <input type="text" id="userName" placeholder="Введіть ваше ім'я" required>
-            <input type="email" id="userEmail" placeholder="Введіть ваш емейл" required>
-            <button type="submit" class="buy-btn">Підтвердити покупку</button>
+        <img id="modalImage" class="modal-image" src="" alt="Product">
+        <p>Заповніть форму, щоб зробити замовлення</p>
+        <form>
+            <label for="userName">Ваше ім'я:</label><br>
+            <input type="text" id="userName" name="userName" placeholder="Ім'я" required><br><br>
+            <label for="phoneNumber">Ваш номер телефону:</label><br>
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+380123456789" required><br><br>
+            <button type="submit" class="submit-btn">Підтвердити</button>
         </form>
     </div>
+</div>
+
 </div>
 </main>
 

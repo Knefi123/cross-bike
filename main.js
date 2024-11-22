@@ -1,35 +1,26 @@
-// Відкриваємо модальне вікно
+// Функція відкриття модального вікна
 function openModal(productId) {
-    const modal = document.getElementById("buyModal");
-    const modalImage = document.getElementById("modalImage");
+    if (window.innerWidth <= 768) { // Перевіряємо, чи пристрій є мобільним
+        const productImage = document.querySelector(`#${productId} .product-image`).src;
 
-    // Отримуємо зображення товару з картки
-    const productImage = document.querySelector(`#${productId} .product-image`).src;
+        const modalImage = document.getElementById("modalImage");
+        modalImage.src = productImage;
 
-    // Встановлюємо зображення товару в модальне вікно
-    modalImage.src = productImage;
-
-    // Відкриваємо модальне вікно
-    modal.style.display = "block";
+        const modal = document.getElementById("buyModal");
+        modal.style.display = "block";
+    }
 }
 
-// Закриваємо модальне вікно
+// Функція закриття модального вікна
 function closeModal() {
     const modal = document.getElementById("buyModal");
     modal.style.display = "none";
 }
 
-// Обробник форми покупки
-document.getElementById("purchaseForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    const name = document.getElementById("userName").value;
-    const email = document.getElementById("userEmail").value;
-
-    if (name && email) {
-        alert(`Покупка підтверджена! Лист на ім'я ${name} буде надіслано на емейл ${email}.`);
-        closeModal();
-    } else {
-        alert("Будь ласка, введіть ваше ім'я та емейл!");
+// Закриття модального вікна при кліку поза ним
+window.onclick = function(event) {
+    const modal = document.getElementById("buyModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
-});
+};
