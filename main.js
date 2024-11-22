@@ -1,14 +1,28 @@
-// Відкриття модального вікна
+// Open the modal with the product's image
 function openModal(productId) {
-    const modal = document.getElementById("buyModal");
-    const modalImage = document.getElementById("modalImage");
-    const productImage = document.getElementById(productId).getElementsByTagName('img')[0];
-    modalImage.src = productImage.src;  // Зміна зображення на модальному вікні
-    modal.style.display = "block";  // Показати модальне вікно
+    var modal = document.getElementById('buyModal');
+    var modalImage = document.getElementById('modalImage');
+    
+    // Find the product's image
+    var productImage = document.getElementById(productId).querySelector('.product-image');
+    
+    // Set the modal image source to the clicked product's image
+    modalImage.src = productImage.src;
+
+    // Show the modal
+    modal.style.display = "block";
 }
 
-// Закриття модального вікна
+// Close the modal
 function closeModal() {
-    const modal = document.getElementById("buyModal");
-    modal.style.display = "none";  // Сховати модальне вікно
+    var modal = document.getElementById('buyModal');
+    modal.style.display = "none";
+}
+
+// Close the modal when clicking anywhere outside of the modal content
+window.onclick = function(event) {
+    var modal = document.getElementById('buyModal');
+    if (event.target == modal) {
+        closeModal();
+    }
 }
