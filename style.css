@@ -1,42 +1,4 @@
-Skip to content
-Navigation Menu
-Knefi123
-/
-cross-bike
 
-Type / to search
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-Files
-Go to file
-t
-README.md
-index.html
-main.js
-style.css
-Breadcrumbscross-bike
-/style.css
-Latest commit
-Knefi123
-Knefi123
-asf
-755c66b
- · 
-17 hours ago
-History
-File metadata and controls
-
-Code
-
-Blame
-415 lines (355 loc) · 7.38 KB
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -100,7 +62,18 @@ header {
 .hero-text {
     color: white;
     text-align: center;
+    font-size: 2.5rem;
 }
+
+
+
+
+
+
+
+
+
+
 
 .products-container {
     display: flex;
@@ -109,17 +82,32 @@ header {
     flex-wrap: wrap;
 }
 
+
 .product-card {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 400px; /* Видовжуємо картку */
+    width: 48%;  /* Зменшуємо ширину картки, щоб їх було дві на рядок */
+    height: auto;  /* Висота автоматично підлаштовується під контент */
     border: 1px solid #ccc;
-    margin: 20px;
+    margin: 10px 1%;  /* Відступи між картками */
     padding: 10px;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Медіа-запит для екрану мобільного телефону */
+@media (max-width: 768px) {
+    .product-card {
+        width: 48%;  /* Дві картки на рядок на мобільних пристроях */
+    }
+}
+
+/* Медіа-запит для маленьких екранів (телефонів в портретному режимі) */
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;  /* Одна картка на рядок на дуже маленьких екранах */
+    }
 }
 
 .product-image {
@@ -136,6 +124,11 @@ header {
     justify-content: space-between;
 }
 
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .product-description {
     font-size: 14px;
     color: #555;
@@ -145,6 +138,13 @@ header {
     font-size: 18px;
     font-weight: bold;
 }
+
+
+
+
+
+
+
 
 .buy-btn {
     background-color: #007bff;
@@ -159,109 +159,31 @@ header {
     background-color: #0056b3;
 }
 
-/* Модальне вікно */
-.modal {
-    display: none; /* Приховане за замовчуванням */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-}
 
 
-.modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 500px;
-}
-
-.close-btn {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-}
-
-/* Для галереї в модальному вікні */
-.modal-gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.modal-image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-}
-
-.prev, .next {
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    margin: 0 10px;
-}
 
 
-/* Для форми в модальному вікні */
-form input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    border-radius: 5px;
-}
-
-form button:hover {
-    background-color: #0056b3;
-}
-
-main{
-    display: flex;
-    background-color: #ffffff;
-}
 
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
 
-/* Стиль для кнопки */
-.highlight-button {
-    position: relative;
-    background-color: #000000;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 8px;
-    text-decoration: none;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -280,44 +202,60 @@ body {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
-    position: relative;
-    margin: 10% auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    background-color: white;
     padding: 20px;
-    background: white;
-    border-radius: 10px;
-    max-width: 400px;
-    text-align: center;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
 }
 
+.modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+nav a:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
+
+
 .modal-image {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     margin-bottom: 20px;
 }
 
+
 .close-btn {
     position: absolute;
     top: 10px;
-    right: 10px;
-    font-size: 24px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
     cursor: pointer;
 }
 
 .modal-content {
-    position: relative;
-    margin: 10% auto; /* Центрування по вертикалі */
-    transform: translateY(-50%);
+    background-color: white;
+    margin: 15% auto;
     padding: 20px;
-    text-align: center;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
 }
 
 /* Для галереї в модальному вікні */
@@ -372,23 +310,20 @@ form button:hover {
 
 /* Показувати кнопку тільки для екранів менше 768px */
 @media (max-width: 768px) {
-    .mobile-buy-btn {
-        display: block;
-        width: 100%;
-        margin-top: 20px;
-        background-color: #28a745;
-        color: white;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
+    .products-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .mobile-buy-btn:hover {
-        background-color: #218838;
+    .product-card {
+        width: 90%;
+    }
+
+    .modal-content {
+        width: 90%;
     }
 }
+
 input[type="text"], input[type="tel"] {
     width: 80%;
     padding: 8px;
@@ -401,12 +336,6 @@ input[type="text"], input[type="tel"] {
     background-color: #218838;
 }
 
-/* Адаптація для мобільних пристроїв */
-@media (max-width: 768px) {
-    .modal-content {
-        width: 90%;
-    }
-}
 
 
 
