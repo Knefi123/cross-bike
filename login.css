@@ -1,0 +1,208 @@
+header {
+    background-color: black;
+    padding: 10px 20px;
+   width: 90%;
+}
+
+.div-head {
+    display: flex; /* Використовуємо Flexbox для вирівнювання */
+    align-items: center; /* Вирівнювання по вертикалі */
+    justify-content: space-between; /* Розташування логотипу та кнопок по краях */
+    flex-wrap: wrap; /* Дозволяємо перенос для маленьких екранів */
+}
+
+/* Логотип */
+.head-img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+/* Контейнер для кнопок */
+nav {
+    display: flex;
+    gap: 10px; /* Відстань між кнопками */
+}
+
+/* Стилі кнопок */
+.highlight-button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    text-decoration: none;
+    position: relative;
+}
+
+.highlight-button:hover::after {
+    width: 100%;
+}
+
+.highlight-button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Стилі для маленьких екранів */
+@media (max-width: 768px) {
+    .div-head {
+        flex-wrap: nowrap; /* Не дозволяємо перенос елементів */
+    }
+
+    nav {
+        flex-direction: row; /* Кнопки залишаються в рядок */
+        gap: 5px; /* Зменшуємо відстань між кнопками */
+    }
+
+    .head-img {
+        margin-right: auto; /* Відсуваємо логотип вліво */
+    }
+
+    .highlight-button {
+        font-size: 14px; /* Зменшуємо розмір шрифту кнопок */
+        padding: 8px 12px; /* Зменшуємо відступи кнопок */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Registration Form */
+.wrapper {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-signin {
+    max-width: 250px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.form-signin-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-control {
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #444;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Стилі для футера */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-logo-img {
+    width: 100px;
+    height: auto;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}

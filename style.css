@@ -101,7 +101,7 @@ nav {
 .hero {
     position: relative;
     height: 600px;
-    width: 404px;
+    width: 402px;
     background-image: url("https://c.pxhere.com/photos/c7/64/dirt_bike_air_jump_motocross_rider_extreme_sports_biker_motocross_extreme_race-1183330.jpg!d");
     background-size: cover;
     background-position: center;
@@ -158,7 +158,7 @@ nav {
     flex-wrap: wrap; /* Картки переносяться на новий рядок */
     justify-content: space-between; /* Розташування з рівномірним відступом */
     padding: 10px; /* Відступи від країв контейнера */
-    gap: 6о0px; /* Відстань між картками */
+    gap: 60px; /* Відстань між картками */
     box-sizing: border-box; /* Враховує padding в ширині контейнера */
 }
 

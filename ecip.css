@@ -101,18 +101,19 @@ nav {
 .hero {
     position: relative;
     height: 600px;
-    width: 404px;
-    background-image: url("https://c.pxhere.com/photos/c7/64/dirt_bike_air_jump_motocross_rider_extreme_sports_biker_motocross_extreme_race-1183330.jpg!d");
+    width: 402px;
+    background-image: url("https://hdpic.club/uploads/posts/2021-12/1640542638_3-hdpic-club-p-enduro-6.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: 62% center;
     background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+
 .hero-text {
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     font-size: 2.5rem;
 }
@@ -158,7 +159,7 @@ nav {
     flex-wrap: wrap; /* Картки переносяться на новий рядок */
     justify-content: space-between; /* Розташування з рівномірним відступом */
     padding: 10px; /* Відступи від країв контейнера */
-    gap: 6о0px; /* Відстань між картками */
+    gap: 60px; /* Відстань між картками */
     box-sizing: border-box; /* Враховує padding в ширині контейнера */
 }
 
