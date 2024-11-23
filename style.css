@@ -7,32 +7,50 @@ body {
     align-items: center;
 }
 
+
+
+
+
 header {
     background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 10px 20px;
-    height: 60px;
-    width:364px;
+   width: 90%;
 }
 
+.div-head {
+    display: flex; /* Використовуємо Flexbox для вирівнювання */
+    align-items: center; /* Вирівнювання по вертикалі */
+    justify-content: space-between; /* Розташування логотипу та кнопок по краях */
+    flex-wrap: wrap; /* Дозволяємо перенос для маленьких екранів */
+}
+
+/* Логотип */
 .head-img {
     height: 50px;
     margin-right: 20px;
 }
 
+/* Контейнер для кнопок */
+nav {
+    display: flex;
+    gap: 10px; /* Відстань між кнопками */
+}
+
+/* Стилі кнопок */
 .highlight-button {
-    position: relative;
     background-color: #000000;
     color: white;
     padding: 10px 20px;
     border: none;
     font-size: 16px;
     cursor: pointer;
-    overflow: hidden;
     border-radius: 8px;
     text-decoration: none;
+    position: relative;
+}
+
+.highlight-button:hover::after {
+    width: 100%;
 }
 
 .highlight-button::after {
@@ -46,9 +64,39 @@ header {
     transition: width 0.3s ease-in-out;
 }
 
-.highlight-button:hover::after {
-    width: 100%;
+/* Стилі для маленьких екранів */
+@media (max-width: 768px) {
+    .div-head {
+        flex-wrap: nowrap; /* Не дозволяємо перенос елементів */
+    }
+
+    nav {
+        flex-direction: row; /* Кнопки залишаються в рядок */
+        gap: 5px; /* Зменшуємо відстань між кнопками */
+    }
+
+    .head-img {
+        margin-right: auto; /* Відсуваємо логотип вліво */
+    }
+
+    .highlight-button {
+        font-size: 14px; /* Зменшуємо розмір шрифту кнопок */
+        padding: 8px 12px; /* Зменшуємо відступи кнопок */
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .hero {
     position: relative;
@@ -110,7 +158,7 @@ header {
     flex-wrap: wrap; /* Картки переносяться на новий рядок */
     justify-content: space-between; /* Розташування з рівномірним відступом */
     padding: 10px; /* Відступи від країв контейнера */
-    gap: 60px; /* Відстань між картками */
+    gap: 6о0px; /* Відстань між картками */
     box-sizing: border-box; /* Враховує padding в ширині контейнера */
 }
 
