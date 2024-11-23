@@ -75,31 +75,46 @@ nav {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* Registration Form */
-.wrapper {
-    margin-top: 80px;
-    margin-bottom: 80px;
+/* Основні стилі для body і html, щоб заповнити весь екран */
+html, body {
+    height: 100%; /* Висота на весь екран */
+    margin: 0; /* Прибираємо стандартні відступи */
+    padding: 0; /* Прибираємо стандартні відступи */
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Встановлюємо вертикальне вирівнювання */
 }
 
+/* Основний контейнер */
+main {
+    flex: 1; /* Гарантуємо, що основний контент заповнює вільний простір */
+}
+
+
+
+
+
+
+
+
+
+
+/* Стилі для контейнера wrapper */
+.wrapper {
+    display: flex;
+    justify-content: center; /* Горизонтальне вирівнювання */
+    align-items: center; /* Вертикальне вирівнювання */
+    height: 100%; /* Висота на весь екран */
+    margin: 0; /* Прибираємо зовнішні відступи */
+}
+
+/* Форма реєстрації */
 .form-signin {
-    max-width: 250px;
+    max-width: 400px;
     padding: 20px;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     width: 100%;
+    border-radius: 8px;
 }
 
 .form-signin-heading {
@@ -144,11 +159,12 @@ button[type="submit"]:hover {
 
 /* Стилі для футера */
 footer {
-    background-color: #000000;
+    background-color: #000;
     color: white;
     padding: 30px 20px;
     text-align: center;
     font-size: 14px;
+    position: relative;
 }
 
 .footer-container {
