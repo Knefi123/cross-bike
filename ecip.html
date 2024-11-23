@@ -1,0 +1,165 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirt Bike</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="div-head">
+            <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/motocross-dirt-bike-off-road-motorcycle-racing-jeff-hobrath.jpg" class="head-img" alt="Логотип">
+            <nav>
+                <a href="#products" class="highlight-button">Мото екіпірування</a>
+                <a href="#contact" class="highlight-button">Увійти</a>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Dirt Bike</h2>
+        </div>
+    </section>
+
+
+
+<main>
+    <!-- Контейнер для карток товарів -->
+    <div class="products-container">
+        <!-- Картка товару -->
+        <div class="product-card" id="product1" onclick="openModal('product1')">
+            <img src="https://mot-o.com/image/cache/catalog/data/content/KOVI/ADVANCE/2023/KOVI%20ADVANCE%20250%20(4)-500x500w.jpg" alt="Мотоцикл" class="product-image">
+            <div class="product-info">
+                <h3>Kovi advance 250</h3>
+                <p class="price">Ціна: $2090</p>
+            </div>
+        </div>
+
+        <div class="product-card" id="product2" onclick="openModal('product2')">
+            <img src="https://th.bing.com/th/id/OIP.DnR0LMQg1Wt3eYx6WOgbywHaHa?w=1000&h=1000&rs=1&pid=ImgDetMain" alt="Мотоцикл" class="product-image">
+            <div class="product-info">
+                <h3>Kayo K2</h3>
+                <p class="price">Ціна: $2020</p>
+            </div>
+        </div>
+
+        <div class="product-card" id="product3" onclick="openModal('product3')">
+            <img src="https://www.kovi.kiev.ua/wp-content/uploads/2021/06/Kovi_PRO300-2.jpg" alt="Мотоцикл" class="product-image">
+            <div class="product-info">
+                <h3>Kovi 300 Lite</h3>
+                <p class="price">Ціна: $2730</p>
+            </div>
+        </div>
+
+        <div class="product-card" id="product4" onclick="openModal('product4')">
+            <img src="https://mot-o.com/image/cache_webp/cache/9001-10000/9516/additional/4617-KOVI%20JNR%20250_3-0-3-1000x1000w.webp" alt="Мотоцикл" class="product-image">
+            <div class="product-info">
+                <h3>Kovi jnr 250</h3>
+                <p class="price">Ціна: $2194</p>
+            </div>
+        </div>
+
+        <div class="product-card" id="product5" onclick="openModal('product5')">
+            <img src="https://moto-xata.com.ua/images/stories/virtuemart/product/XY250GY-6C_orange_green_1.jpg" alt="Мотоцикл" class="product-image">
+            <div class="product-info">
+                <h3>Shineray XY250GY-6C</h3>
+                <p class="price">Ціна: $1875</p>
+            </div>
+        </div>
+
+        <div class="product-card" id="product6" onclick="openModal('product6')">
+            <img src="https://www.kovi.kiev.ua/wp-content/uploads/2022/01/max300_TURQ2.jpg" alt="Мотоцикл" class="product-image">
+            <div class="product-info">
+                <h3>Kovi MAX 300</h3>
+                <p class="price">Ціна: $2894</p>
+            </div>
+        </div>
+
+        <div class="product-card" id="product7" onclick="openModal('product7')">
+            <img src="https://kms-moto.com.ua/image/cache/catalog/GEON/Geon%20Dakar%20GNX%20300%20EFI%20(2020)%20/foto-geon-dakar-gnx-300-efi-enduro-factory-1000x1000.jpg" alt="Мотоцикл" class="product-image">
+            <div class="product-info">
+                <h3>Geon Dakar 250</h3>
+                <p class="price">Ціна: $2580</p>
+            </div>
+        </div>
+
+        <div class="product-card" id="product8" onclick="openModal('product8')">
+            <img src="https://mototek.com.ua/previev.php?src=https://mototek.com.ua/components/com_jshopping/files/img_products/full_GEON_DAKAR_GNS_300_1.jpg&w=531&h=403" alt="Мотоцикл" class="product-image">
+            <div class="product-info">
+                <h3>Geon Dakar GNS 300</h3>
+                <p class="price">Ціна: $3180</p>
+            </div>
+        </div>
+
+        <div class="product-card" id="product9" onclick="openModal('product9')">
+            <img src="https://mot-o.com/image/cache_webp/cache/8001-9000/8761/additional/b2db-KOVI%20ADVANCE%20300_1-0-3-1000x1000w.webp" alt="Мотоцикл" class="product-image">
+            <div class="product-info">
+                <h3>Kovi advance 300</h3>
+                <p class="price">Ціна: $2615</p>
+            </div>
+        </div>
+
+        <div class="product-card" id="product10" onclick="openModal('product10')">
+            <img src="https://www.probenzo.com.ua/images/stories/virtuemart/product/SKYBIKE%20KAYO%20T2-250%2021-18.jpg" alt="Мотоцикл" class="product-image">
+            <div class="product-info">
+                <h3>Kayo T2</h3>
+                <p class="price">Ціна: $2699</p>
+            </div>
+        </div>
+
+       
+
+        <!-- Додаткові картки товару... -->
+    </div>
+
+<!-- Модальне вікно -->
+<div id="buyModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Product Image" class="modal-image">
+        <form id="buyForm">
+            <input type="text" id="name" name="name" placeholder="Ваше ім'я" required><br>
+            <input type="tel" id="phone" name="phone" placeholder="Телефон" required pattern="^\+380\d{9}$" title="Введіть правильний номер телефону"><br>
+            <input type="email" id="email" name="email" placeholder="Електронна пошта" required><br>
+            <textarea id="address" name="address" placeholder="Адреса доставки" required></textarea><br>
+            <button type="submit">Підтвердити покупку</button>
+        </form>
+    </div>
+</div>
+
+</div>
+</main>
+
+
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/motocross-dirt-bike-off-road-motorcycle-racing-jeff-hobrath.jpg" alt="Логотип" class="footer-logo-img">
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#about" class="footer-link">Про нас</a></li>
+                <li><a href="index.html" class="footer-link">Продукти</a></li>
+                <li><a href="#contact" class="footer-link">Контакти</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <a href="#" class="social-icon"><img src="https://ugc.production.linktr.ee/08617789-27d0-4373-ae8e-5aa9d2a0e007_IMG-5499.jpeg?io=true&size=thumbnail-stack-v1_0" alt="Tik tok"></a>
+            <a href="#" class="social-icon"><img src="https://static.vecteezy.com/system/resources/previews/008/385/546/large_2x/telegram-social-media-icon-symbol-design-element-illustration-free-vector.jpg" alt="Telegramm"></a>
+            <a href="#" class="social-icon"><img src="https://freelogopng.com/images/all_img/1683191308instagram-logo-black-and-white.png" alt="Instagram"></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Dirt Bike. Усі права захищені.</p>
+    </div>
+</footer>
+</body>
+</html>

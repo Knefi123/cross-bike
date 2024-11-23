@@ -1,0 +1,669 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+header {
+    background-color: black;
+    padding: 10px 20px;
+   width: 90%;
+}
+
+.div-head {
+    display: flex; /* Використовуємо Flexbox для вирівнювання */
+    align-items: center; /* Вирівнювання по вертикалі */
+    justify-content: space-between; /* Розташування логотипу та кнопок по краях */
+    flex-wrap: wrap; /* Дозволяємо перенос для маленьких екранів */
+}
+
+/* Логотип */
+.head-img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+/* Контейнер для кнопок */
+nav {
+    display: flex;
+    gap: 10px; /* Відстань між кнопками */
+}
+
+/* Стилі кнопок */
+.highlight-button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    text-decoration: none;
+    position: relative;
+}
+
+.highlight-button:hover::after {
+    width: 100%;
+}
+
+.highlight-button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Стилі для маленьких екранів */
+@media (max-width: 768px) {
+    .div-head {
+        flex-wrap: nowrap; /* Не дозволяємо перенос елементів */
+    }
+
+    nav {
+        flex-direction: row; /* Кнопки залишаються в рядок */
+        gap: 5px; /* Зменшуємо відстань між кнопками */
+    }
+
+    .head-img {
+        margin-right: auto; /* Відсуваємо логотип вліво */
+    }
+
+    .highlight-button {
+        font-size: 14px; /* Зменшуємо розмір шрифту кнопок */
+        padding: 8px 12px; /* Зменшуємо відступи кнопок */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero {
+    position: relative;
+    height: 600px;
+    width: 404px;
+    background-image: url("https://c.pxhere.com/photos/c7/64/dirt_bike_air_jump_motocross_rider_extreme_sports_biker_motocross_extreme_race-1183330.jpg!d");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap; /* Картки переносяться на новий рядок */
+    justify-content: space-between; /* Розташування з рівномірним відступом */
+    padding: 10px; /* Відступи від країв контейнера */
+    gap: 6о0px; /* Відстань між картками */
+    box-sizing: border-box; /* Враховує padding в ширині контейнера */
+}
+
+.product-card {
+    flex: 1 1 calc(33.333% - 20px); /* Три картки в ряд на великих екранах */
+    max-width: calc(33.333% - 20px); /* Максимальна ширина */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Зображення товару */
+.product-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Зберігає пропорції, але займає всю висоту/ширину */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Інформація про товар */
+.product-info h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.product-info p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Адаптивні стилі */
+@media (max-width: 1024px) {
+    .product-card {
+        flex: 1 1 calc(50% - 20px); /* Дві картки в ряд для середніх екранів */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        flex: 1 1 calc(100% - 20px); /* Одна картка в ряд на мобільних */
+        max-width: calc(100% - 20px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Модальне вікно */
+/* Стиль для модельного вікна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+}
+
+
+/* Медіа-запит для мобільних пристроїв */
+@media (max-width: 768px) {
+    .modal {
+        width: 90%;  /* Зменшуємо ширину для мобільних */
+        height: 60%;  /* Зменшуємо висоту для мобільних */
+        max-height: 500px;  /* Максимальна висота для мобільних */
+    }
+}
+
+
+
+.modal .confirm-button:hover {
+    background-color: #45a049;
+}
+
+
+/* Контент модального вікна */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 70%;
+    max-width: 600px;
+}
+
+
+/* Стилі для модального вікна */
+#buyModal {
+    display: none;  /* Початковий стан — приховане */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 80%; /* Ширина вікна */
+    max-width: 600px;
+    height: auto; /* Динамічна висота */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: solid 5px #333; /* Бордер товщиною 5px */
+    z-index: 1000;
+}
+
+/* Стилі для модального вікна */
+#myModal {
+    display: none; /* Сховати модальне вікно за замовчуванням */
+    position: fixed;
+    z-index: 1; /* Встановлюємо поверх інших елементів */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Чорний фон */
+    background-color: rgba(0,0,0,0.9); /* Прозорий чорний фон */
+}
+
+/* Стиль для великого зображення в модальному вікні */
+#img01 {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    display: block;
+}
+
+/* Стилі для підпису зображення */
+#caption {
+    text-align: center;
+    color: #ccc;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* Стилі для модального вікна на мобільних пристроях */
+@media screen and (max-width: 600px) {
+    #img01 {
+        width: 90%;
+    }
+}
+
+.modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+nav a:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
+
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+/* Для галереї в модальному вікні */
+.modal-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Кнопка закриття вікна */
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.modal .close:hover {
+    color: #000;
+}
+
+/* Стиль для кнопки підтвердження */
+.modal .confirm-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;  /* Відступ від інших елементів */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Для форми в модальному вікні */
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+/* Приховати кнопку за замовчуванням */
+.mobile-buy-btn {
+    display: none;
+}
+
+/* Показувати кнопку тільки для екранів менше 768px */
+@media (max-width: 768px) {
+    .products-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+input[type="text"], input[type="tel"] {
+    width: 80%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.submit-btn:hover {
+    background-color: #218838;
+}
+/* Ховер ефект на хрестик */
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Стилі для кнопки закриття */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Адаптивні стилі */
+@media (max-width: 768px) {
+    .product-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 90%;
+    }
+    .modal-content {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Стилі для футера */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-logo-img {
+    width: 100px;
+    height: auto;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
