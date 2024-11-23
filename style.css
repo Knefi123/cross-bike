@@ -79,91 +79,134 @@ header {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .products-container {
     display: flex;
-    justify-content: space-around;
-    margin: 20px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Картки переносяться на новий рядок */
+    justify-content: space-between; /* Розташування з рівномірним відступом */
+    padding: 10px; /* Відступи від країв контейнера */
+    gap: 60px; /* Відстань між картками */
+    box-sizing: border-box; /* Враховує padding в ширині контейнера */
 }
 
-
-/* Стиль для карток товарів */
 .product-card {
-    display: flex;
-    flex-direction: column;
-    width: 30%;  /* Зменшуємо ширину карток */
-    height: auto;
-    border: 1px solid #ccc;
-    margin: 10px 1%;  
-    padding: 10px;
+    flex: 1 1 calc(33.333% - 20px); /* Три картки в ряд на великих екранах */
+    max-width: calc(33.333% - 20px); /* Максимальна ширина */
     background-color: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 8px;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Медіа-запит для екрану мобільного телефону */
-@media (max-width: 768px) {
-    .product-card {
-        width: 30%;  /* Зменшуємо ширину картки ще більше */
-    }
-}
-
-/* Медіа-запит для дуже маленьких екранів */
-@media (max-width: 480px) {
-    .product-card {
-        width: 30%;  /* Для дуже маленьких екранів */
-    }
-}
-
-
-.product-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border-radius: 8px;
-}
-
-.product-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .product-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.product-description {
-    font-size: 14px;
+/* Зображення товару */
+.product-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Зберігає пропорції, але займає всю висоту/ширину */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Інформація про товар */
+.product-info h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.product-info p {
+    font-size: 1.2rem;
     color: #555;
 }
 
-.product-price {
-    font-size: 18px;
+.price {
+    font-size: 1.2rem;
     font-weight: bold;
+    color: #333;
+    margin: 10px 0;
 }
 
-
-
-
-
-
-
-
-.buy-btn {
+.btn {
+    padding: 10px 20px;
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px 20px;
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-.buy-btn:hover {
+.btn:hover {
     background-color: #0056b3;
 }
+
+/* Адаптивні стилі */
+@media (max-width: 1024px) {
+    .product-card {
+        flex: 1 1 calc(50% - 20px); /* Дві картки в ряд для середніх екранів */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        flex: 1 1 calc(100% - 20px); /* Одна картка в ряд на мобільних */
+        max-width: calc(100% - 20px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -494,56 +537,7 @@ input[type="text"], input[type="tel"] {
 
 
 
-/* Стиль для карток товару */
-.products-container {
-    display: flex;
-    flex-wrap: wrap; /* Це дозволяє карткам переноситися на новий рядок */
-    justify-content: space-between; /* Вирівнювання карток по рядку */
-    gap: 20px; /* Відстань між картками */
-    padding: 20px;
-}
-.product-card {
-    width: 30%;
-    margin: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-}
 
-
-.product-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Стиль для зображення товару */
-.product-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Стиль для інформації про товар */
-.product-info {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.product-info h3 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-.product-info p {
-    font-size: 1.2rem;
-    color: #555;
-}
-
-.price {
-    font-size: 1.2em;
-    color: #333;
-}
 
 
 
