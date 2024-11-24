@@ -1,3 +1,16 @@
+/* Загальні стилі */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #111; /* Темний фон */
+    color: white;
+}
+
+/* Хедер */
 header {
     background-color: black;
     padding: 10px 20px;
@@ -75,72 +88,84 @@ nav {
 
 
 
-/* Основні стилі для body і html, щоб заповнити весь екран */
-html, body {
-    height: 100%; /* Висота на весь екран */
-    margin: 0; /* Прибираємо стандартні відступи */
-    padding: 0; /* Прибираємо стандартні відступи */
-    display: flex;
-    flex-direction: column; /* Встановлюємо вертикальне вирівнювання */
-}
 
-/* Основний контейнер */
+
+
+
+
+
+/* Основний контент */
 main {
-    flex: 1; /* Гарантуємо, що основний контент заповнює вільний простір */
-}
-
-
-
-
-
-
-
-
-
-
-/* Стилі для контейнера wrapper */
-.wrapper {
+    flex: 1;
     display: flex;
-    justify-content: center; /* Горизонтальне вирівнювання */
-    align-items: center; /* Вертикальне вирівнювання */
-    height: 100%; /* Висота на весь екран */
-    margin: 0; /* Прибираємо зовнішні відступи */
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
 }
 
-/* Форма реєстрації */
-.form-signin {
-    max-width: 400px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+
+
+
+
+
+
+
+
+
+
+
+.wrapper {
+    background-color: #333;
+
+    padding: 40px;
+    max-width: 450px;
     width: 100%;
-    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Заголовок форми */
 .form-signin-heading {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 32px;
+    margin-bottom: 30px;
     text-align: center;
+    font-weight: 600;
+    color: #fff;
 }
 
+/* Контейнери для кожного поля вводу */
+.input-group {
+    margin-bottom: 20px;
+}
+
+/* Стилі для полів вводу */
 .form-control {
-    font-size: 16px;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #444;
+    color: white;
+    font-size: 16px;
+    transition: border 0.3s ease-in-out;
 }
 
+.form-control:focus {
+    border-color: #fff;
+    outline: none;
+}
+
+/* Кнопка відправки */
 button[type="submit"] {
     background-color: #000;
     color: white;
-    padding: 10px;
+    padding: 15px;
     width: 100%;
-    font-size: 16px;
+    font-size: 18px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button[type="submit"]:hover {
@@ -157,14 +182,26 @@ button[type="submit"]:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Стилі для футера */
 footer {
-    background-color: #000;
+    background-color: #000000;
     color: white;
     padding: 30px 20px;
     text-align: center;
     font-size: 14px;
-    position: relative;
 }
 
 .footer-container {
