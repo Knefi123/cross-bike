@@ -135,6 +135,7 @@ main {
 /* Контейнери для кожного поля вводу */
 .input-group {
     margin-bottom: 20px;
+    margin-right: 33px;
 }
 
 /* Стилі для полів вводу */
