@@ -50,7 +50,7 @@ nav a:hover {
 .highlight-button {
     background-color: #000000;
     color: white;
-    padding: 10px 20px;
+    padding: 5px 20px; /* Зменшені відступи */
     border: none;
     font-size: 16px;
     cursor: pointer;
